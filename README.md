@@ -18,3 +18,8 @@ gem 'simple_form', '~> 5.1'
 
 - `bundle install`
 - restart rails server: `rails s`
+
+## Generate Model - `Document`
+
+- `rails generate model Document title:string content:text`
+- `bin/rails db:migrate`

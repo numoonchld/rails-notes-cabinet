@@ -32,4 +32,8 @@ gem 'simple_form', '~> 5.1'
 - add resources in `config/routes`
 
 - `create` and `update` controller methods dont have a view per se
-  - tney are channeled through the `edit` view
+  - they are channeled through the `edit` view
+
+### Install simple form
+
+- `rails generate simple_form:install`

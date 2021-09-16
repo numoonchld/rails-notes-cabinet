@@ -27,7 +27,17 @@ class DocumentsController < ApplicationController
   def edit 
   end
 
+  def update
+    if @document.save
+      redirect_to @document # redirect refreshes page
+    else 
+      render 'edit' # render does not refresh page
+    end
+  end
+
   def destroy
+    @document.destroy
+    redirect_to documents_path
   end
 
   private 

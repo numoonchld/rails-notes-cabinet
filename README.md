@@ -19,7 +19,17 @@ gem 'simple_form', '~> 5.1'
 - `bundle install`
 - restart rails server: `rails s`
 
-## Generate Model - `Document`
+## `Document` Entity
+
+### Model
 
 - `rails generate model Document title:string content:text`
 - `bin/rails db:migrate`
+
+### Controller and Views
+
+- `rails generate controller Documents`
+- add resources in `config/routes`
+
+- `create` and `update` controller methods dont have a view per se
+  - tney are channeled through the `edit` view

@@ -37,3 +37,9 @@ gem 'simple_form', '~> 5.1'
 ### Install simple form
 
 - `rails generate simple_form:install`
+
+### Install devise
+
+- `rails generate devise:install`
+- `rails g devise:views`: generate _devise_ authentication views
+- `rails db:migrate`

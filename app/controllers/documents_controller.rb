@@ -1,5 +1,9 @@
 class DocumentsController < ApplicationController
+
+  before_action :find_document, only: [:show, :edit, :update, :destroy]
+
   def index 
+    @documents = Document.all.order('created_at DESC')
   end
 
   def show
@@ -14,9 +18,9 @@ class DocumentsController < ApplicationController
     @document = Document.new(document_params)
 
     if @document.save
-      redirect_to @document
+      redirect_to @document # redirect refreshes page
     else 
-      render new
+      render 'new' # render does not refresh page
     end
   end
 
@@ -29,6 +33,7 @@ class DocumentsController < ApplicationController
   private 
 
   def find_document 
+    @document = Document.find(params[:id])
   end
 
   def document_params

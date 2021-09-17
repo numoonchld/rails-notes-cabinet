@@ -1,6 +1,7 @@
 # Notes
 
 - barebones Evernote like app
+- // TODO: add bootstrap for styling
 
 ## Setup
 

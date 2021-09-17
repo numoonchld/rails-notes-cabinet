@@ -43,3 +43,9 @@ gem 'simple_form', '~> 5.1'
 - `rails generate devise:install`
 - `rails g devise:views`: generate _devise_ authentication views
 - `rails db:migrate`
+
+## Associate Users and Documents
+
+- let's add a new column to the Documents table to reference the User ID that created it
+  - `rails generate migration add_user_id_to_documents user_id:integer`
+  - `rails db:migrate`

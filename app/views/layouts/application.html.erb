@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsNotesCabinet</title>
+    <title>Rails Notes Cabinet</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,9 +10,21 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style='margin: 10%'>
+
+    <header> <%= link_to 'File Cabinet', root_path %> 
+    <nav> 
+      <% if user_signed_in? %>
+        <%= link_to 'Create Document', new_document_path %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% else  %>
+        <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
+    </nav>
+    </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    
     <%= yield %>
    
   </body>

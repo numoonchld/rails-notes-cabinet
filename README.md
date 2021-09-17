@@ -1,5 +1,7 @@
 # Notes
 
+- barebones Evernote like app
+
 ## Setup
 
 - `rails generate controller welcome index`
@@ -49,3 +51,7 @@ gem 'simple_form', '~> 5.1'
 - let's add a new column to the Documents table to reference the User ID that created it
   - `rails generate migration add_user_id_to_documents user_id:integer`
   - `rails db:migrate`
+
+# References
+
+- [Normalize.css](https://necolas.github.io/normalize.css/)
